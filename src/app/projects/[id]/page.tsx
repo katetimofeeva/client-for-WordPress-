@@ -1,8 +1,7 @@
 "use client";
 
-import useGetData from "@/hooks/useGetData";
 import { useParams } from "next/navigation";
-import { ProjectById } from "../../../../type.tsx";
+import { ProjectById } from "../../../../type";
 import { useEffect, useState } from "react";
 
 const ProjectPage = () => {
