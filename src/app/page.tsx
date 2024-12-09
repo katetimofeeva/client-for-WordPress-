@@ -8,7 +8,7 @@ import Button from "@/components/Button";
 
 export default function Home() {
   const [clients] = useGetData<IClient[]>(
-    `${process.env.NEXT_PUBLIC_API_URL}/wp-json/twentytwentyone-child/v1/clients`
+    `https://dev-cs-test-50-13.pantheonsite.io/wp-json/twentytwentyone-child/v1/clients`
   );
 
   console.log(process.env.NEXT_PUBLIC_API_URL, "test");

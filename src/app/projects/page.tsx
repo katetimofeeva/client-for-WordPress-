@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Project = () => {
   const [projects, isLoading] = useGetData<IProject[]>(
-    `${process.env.NEXT_PUBLIC_API_URL}/wp-json/twentytwentyone-child/v1/projects`
+    `https://dev-cs-test-50-13.pantheonsite.io/wp-json/twentytwentyone-child/v1/projects`
   );
 
   if (isLoading) {

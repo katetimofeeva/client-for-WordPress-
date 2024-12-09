@@ -16,7 +16,7 @@ const filter: FilterType[] = [
 
 const Product = () => {
   const [products, isLoading] = useGetData<IProduct[]>(
-    `${process.env.NEXT_PUBLIC_API_URL}/wp-json/twentytwentyone-child/v1/products`
+    `https://dev-cs-test-50-13.pantheonsite.io/wp-json/twentytwentyone-child/v1/products`
   );
 
   // const savedFilterName = localStorage.getItem("filterName") || "All";

@@ -10,7 +10,7 @@ const ProjectPage = () => {
 
   useEffect(() => {
     fetch(
-      `${process.env.NEXT_PUBLIC_API_URL}/wp-json/twentytwentyone-child/v1/projects/${id}`
+      `https://dev-cs-test-50-13.pantheonsite.io/wp-json/twentytwentyone-child/v1/projects/${id}`
     )
       .then(res => {
         if (!res.ok) {
