@@ -10,6 +10,8 @@ export default function Home() {
   const [clients] = useGetData<IClient[]>(
     `${process.env.NEXT_PUBLIC_API_URL}/wp-json/twentytwentyone-child/v1/clients`
   );
+
+  console.log(process.env.NEXT_PUBLIC_API_URL, "test");
   const [index, setIndex] = useState(0);
 
   const handleLeft = () => {
