@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import useGetData from "@/hooks/useGetData";
 import { IProduct } from "../../../type";
 import ProductCart from "@/components/ProductCart";
@@ -19,8 +19,13 @@ const Product = () => {
     `${process.env.NEXT_PUBLIC_API_URL}/wp-json/twentytwentyone-child/v1/products`
   );
 
-  const savedFilterName = localStorage.getItem("filterName") || "All";
-  const [filterName, setFilterName] = useState(savedFilterName);
+  // const savedFilterName = localStorage.getItem("filterName") || "All";
+  const [filterName, setFilterName] = useState("All");
+
+  useEffect(() => {
+    const savedFilterName = localStorage.getItem("filterName") || "All";
+    setFilterName(savedFilterName);
+  }, []);
 
   const renamedProducts = products.map(product => ({
     id: product.ID,
